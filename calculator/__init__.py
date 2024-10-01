@@ -1,13 +1,20 @@
-def add(a,b):
-    return a + b
+from calculator.calculations import Calculations
+from calculator.operations import add, subtract, multiply, divide
 
-def subtract(a,b):
-    return a - b
-
-def multiply(a,b):
-    return a * b
-
-def divide(a,b):
-    if b == 0:
-        raise ValueError("You can't divide by zero")
-    return a / b
+class Calculator:
+    @staticmethod
+    def add(a,b):
+        calculations = Calculations(a, b, add)  # Pass the add function from calculator.operations
+        return calculations.get_answer()
+    @staticmethod
+    def subtract(a,b):
+        calculations = Calculations(a, b, subtract)  # Pass the add function from calculator.operations
+        return calculations.get_answer()
+    @staticmethod
+    def multiply (a,b):
+        calculations = Calculations(a, b, multiply)  # Pass the add function from calculator.operations
+        return calculations.get_answer()
+    @staticmethod
+    def divide(a,b):
+        calculations = Calculations(a, b, divide)  # Pass the add function from calculator.operations
+        return calculations.get_answer()

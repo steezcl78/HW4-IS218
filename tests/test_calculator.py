@@ -18,5 +18,5 @@ def test_division():
     assert divide(2,2) == 1
 
 def test_divideByZero():
-    
+    '''Test divide by zero exception'''
     assert divide(2,0) 
