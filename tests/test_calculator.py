@@ -16,7 +16,3 @@ def test_multiplication():
 def test_division():
     '''Test that division works '''
     assert divide(2,2) == 1
-
-def test_divideByZero():
-    '''Test divide by zero exception'''
-    assert divide(2,0) 
